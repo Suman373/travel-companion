@@ -1,0 +1,64 @@
+.form-container {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: grid;
+    place-content: center;
+}
+.form-container h1{
+    font-size: 2.5rem;
+    color:var(--blue);
+    text-align: center;
+    margin:1rem;
+}
+
+.login-form {
+    height: 28rem;
+    width: 28rem;
+    padding: 10px;
+    background: var(--blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.login-form label {
+    font-size: 1.2rem;
+    color: white;
+    margin: 10px 4rem;
+    text-align: left;
+}
+
+.login-form input {
+    height: 2.8rem;
+    width: 68%;
+    margin: 5px auto;
+    padding:10px;
+    font-size: 1.1rem;
+    border:none;
+    outline:none;
+    border-radius: 4px;
+}
+
+.login-form .submit-btn{
+    margin:1rem auto;
+    font-size: 1rem;
+    width:fit-content;
+    padding:8px;
+    background: white;
+    color:var(--blue);
+    outline:none;
+    border:none;
+    border-radius: 8px;
+    cursor:pointer;
+}
+
+.already-user{
+    height:3rem;
+    width:100%;
+    text-align: center;
+}
+.already-user h4{
+    color:white;
+}
