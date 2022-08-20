@@ -3,6 +3,8 @@ import { useState } from "react";
 import '../styles/LoginForm.css';
 const LoginForm = () => {
 
+    document.title = "Travel Companion | Login";
+
     // states
      const [name, setName] = useState("");
      const [email, setEmail] = useState("");
@@ -53,7 +55,7 @@ const LoginForm = () => {
                 </form>
             </div>
         </>
-    )
+    );
 }
 
 export default LoginForm;

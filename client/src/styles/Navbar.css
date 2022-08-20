@@ -1,0 +1,31 @@
+
+.nav-panel{
+    height:3rem;
+    width:100vw;
+    padding:1rem;
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.nav-panel .nav-logo{
+    position: fixed;
+    left:1rem;
+    top:1rem;
+    font-size: 1.8rem;
+    text-decoration: none;
+    color:var(--blue);
+}
+
+.nav-panel button{
+    font-size: 1rem;
+    margin:0 1rem;
+    margin-top: 1.5rem;
+    outline:none;
+    border:none;
+    border-radius: 15px;
+    padding:10px 1rem;
+    background:var(--blue);
+    color:white;
+    cursor: pointer;
+}

@@ -4,13 +4,15 @@ import '../styles/RegisterForm.css';
 
 const RegisterForm =()=>{
 
+    document.title = "Travel Companion | Sign Up";
+
     // states
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [ pwd, setPwd] = useState('');
 
     const handleSubmit = (e)=>{
-        // e.preventDefault();
+        e.preventDefault();
         console.log(name,email,pwd);
     }
 
