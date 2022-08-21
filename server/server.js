@@ -4,7 +4,8 @@ const dotenv= require("dotenv")
 const PORT = 1113
 const app = express()
 
-const tagRoute=require("./routes/tags")
+const tagRoute = require("./routes/tags")
+const userRoute= require("./routes/users")
 
 dotenv.config()
 
@@ -23,7 +24,8 @@ app.get("/", (req, res) => {
     res.send("Hello")
 })
 
-app.use("/route/tags",tagRoute)
+app.use("/route/tags", tagRoute)
+app.use("/route/users",userRoute)
 
 app.listen(PORT, function () {
     console.log("Server Listening");
