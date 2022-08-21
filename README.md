@@ -4,7 +4,7 @@
 
 ### Team : DESIROUS HACKERS
 
-### Members : [Suman Roy](https://github.com/Suman373) [Jayanth MKV](https://github.com/Jayanth-MKV)
+### Members : [Suman Roy](https://github.com/Suman373) & [Jayanth MKV](https://github.com/Jayanth-MKV)
 
 ### About 
 Travel Companion is a full-stack web application. As the name suggests it is for everyone who has a knack for travelling and exploring. We often visit a place and share the pictures on social media. This, doesn't help our fellow travellers if they are not active in such platforms. With travel companion you can review a certain location on our integrated map and drop a review about the place. This way, it helps someone to check more about the spot/place/city. 
