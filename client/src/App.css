@@ -1,4 +1,9 @@
 /* import fonts here */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Noto+Serif&display=swap');
+/* 
+font-family: 'Anton', sans-serif;
+font-family: 'Noto Serif', serif;
+ */
 /* reset */
 *,*::before,*::after{
   margin:0;
@@ -8,4 +13,10 @@
 
 :root{
   --blue:#1515a1;
+  --body-bg:#f5f3f3e0;
+}
+
+body{
+  background: #f5f3f3e0;
+  overflow-x:hidden;
 }

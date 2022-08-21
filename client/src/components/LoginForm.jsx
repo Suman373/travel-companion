@@ -3,6 +3,8 @@ import { useState } from "react";
 import '../styles/LoginForm.css';
 const LoginForm = () => {
 
+    document.title = "Travel Companion | Login";
+
     // states
      const [name, setName] = useState("");
      const [email, setEmail] = useState("");
@@ -48,12 +50,12 @@ const LoginForm = () => {
                         Login
                     </button>
                     <div className='already-user'>
-                        <h4>New here ? Sign up</h4>
+                        <h4>New here ? <a href="/register">Sign up</a></h4>
                     </div>
                 </form>
             </div>
         </>
-    )
+    );
 }
 
 export default LoginForm;

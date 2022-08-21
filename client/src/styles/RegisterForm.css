@@ -4,6 +4,7 @@
     overflow: hidden;
     display: grid;
     place-content: center;
+    background:var(--body-bg);
 }
 .form-container h1{
     font-size: 2.5rem;
@@ -46,14 +47,16 @@
     font-size: 1rem;
     width:fit-content;
     padding:8px;
-    background: white;
-    color:var(--blue);
+    background: goldenrod;
+    color:white;
     outline:none;
     border:none;
     border-radius: 8px;
     cursor:pointer;
 }
-
+.register-form .submit-btn:hover{
+    transform:scale(1.08);
+}
 .already-user{
     height:3rem;
     width:100%;
@@ -61,4 +64,8 @@
 }
 .already-user h4{
     color:white;
+}
+.already-user a{
+    color:yellow;
+    text-decoration: none;
 }
