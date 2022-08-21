@@ -2,6 +2,7 @@ import './App.css';
 import RegisterForm from './components/RegisterForm';
 import LoginForm from './components/LoginForm';
 import HomePage from './pages/HomePage';
+import UserPage from './pages/UserPage';
 import {BrowserRouter as Brouter, Routes, Route} from 'react-router-dom';
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
           <LoginForm/>
      }>
      </Route>
+     <Route path="/user" element={
+        <UserPage/>
+     }></Route>
     </Routes>
     </Brouter>
      </div>

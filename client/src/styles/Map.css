@@ -1,0 +1,11 @@
+.map-container{
+    position:relative;
+    width: 100%;
+    height:calc(100vh - 5rem);
+}
+
+.our-map{
+    position: absolute;
+    height:100%;
+    width:100%;
+}
