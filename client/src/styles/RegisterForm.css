@@ -11,6 +11,7 @@
     color:var(--blue);
     text-align: center;
     margin:1rem;
+    font-family: 'Anton', sans-serif;
 }
 
 .register-form {
@@ -68,4 +69,19 @@
 .already-user a{
     color:yellow;
     text-decoration: none;
+}
+
+@media screen and (max-width:500px){
+    .form-container h1{
+        font-size: 1.8rem;
+    }
+    .register-form{
+        width:20rem;
+        height:25rem;
+        margin:0 auto;
+    }
+    .register-form input{
+        height:2.2rem;
+        font-size: 0.9rem;
+    }
 }

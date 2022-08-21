@@ -1,4 +1,4 @@
-.form-container {
+/* .form-container {
     height: 100vh;
     width: 100vw;
     overflow: hidden;
@@ -11,7 +11,7 @@
     color:var(--blue);
     text-align: center;
     margin:1rem;
-}
+} */
 
 .login-form {
     height: 28rem;
@@ -66,4 +66,18 @@
 .already-user a{
     color:yellow;
     text-decoration: none;
+}
+@media screen and (max-width:500px){
+    .form-container h1{
+        font-size: 1.8rem;
+    }
+    .login-form{
+        width:20rem;
+        height: 25rem;
+        margin:0 auto;
+    }
+    .login-form input{
+        height:2.2rem;
+        font-size: 0.9rem;
+    }
 }

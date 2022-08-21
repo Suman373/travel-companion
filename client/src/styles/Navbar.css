@@ -32,3 +32,21 @@
     color:white;
     cursor: pointer;
 }
+
+@media screen and (max-width:650px){
+    .nav-panel .nav-logo{
+        font-size: 1.6rem;
+    }
+    .nav-panel button{
+        padding:8px 1rem;
+    }
+}
+@media screen and (max-width:500px){
+    .nav-panel .nav-logo{
+        font-size: 1.2rem;
+    }
+    .nav-panel button{
+        padding:8px 10px;
+        font-size: 0.8rem;
+    }
+}
