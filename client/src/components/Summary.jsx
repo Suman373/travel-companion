@@ -17,7 +17,7 @@ const Summary = () => {
                     <article className="article"> <h4>Hola Explorers! Help your fellow travellers by sharing your review. Our user-friendly map will let you do it in no time !
                     </h4></article>
                 </section>
-                <section className="small-summary">
+                <section className="small-summary second">
                     <article className="article"> <h4>A journey of a thousand miles begin with a single step.
                     </h4></article>
 

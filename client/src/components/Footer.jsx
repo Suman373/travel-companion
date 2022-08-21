@@ -6,7 +6,7 @@ const Footer = () => {
         <>
             <div className="footer-container">
                 <div className="note">
-                    <h4>Travel Companion is made by Suman Roy and Jayanth MKV</h4>
+                    <h4>Travel Companion is made by Jayanth MKV and Suman Roy</h4>
                     <h5> - with <span style={{ color: 'red' }}>❤</span> from <span> IN</span></h5>
                 </div>
                 <div className="social-container">

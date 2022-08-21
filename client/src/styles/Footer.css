@@ -29,11 +29,11 @@
     width:100%;
     margin:1rem auto;
     display:flex;
-    font-size: 2rem;
     align-items: center;
     justify-content:center;
 }
 .social-container p{
+    font-size: 2rem;
     padding:10px;
     cursor: pointer;
 }
@@ -42,4 +42,29 @@
 }
 .copyright{
     margin-bottom:2rem;
+}
+@media screen and (max-width:800px){
+    .footer-container .note h4{
+        font-size: 1.1rem;
+    }
+    .social-container p{
+        font-size: 1.5rem;
+    }
+    .footer-container .note h5 ,.copyright{
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width:500px){
+    .footer-container{
+        height:14rem;
+    }
+    .footer-container .note h5 ,.copyright{
+        padding:5px;
+    }
+    .footer-container .note h4{
+        font-size: 1rem;
+    }
+    .social-container p{
+        font-size: 1.2rem;
+    }
 }
