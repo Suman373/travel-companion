@@ -1,5 +1,5 @@
 .banner-container{
-    height:90vh;
+    height:100vh;
     width:100vw;
     overflow:hidden;
     display: flex;
@@ -14,12 +14,14 @@
     justify-content: center;
 }
 .title-container h1{
-    font-size:4rem;
+    font-size:3.5rem;
     margin:1rem;
+    font-family: 'Anton', sans-serif;
     color:var(--blue);
 }
 .title-container h5{
     font-size: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .title-container button{
     font-size: 1.1rem;

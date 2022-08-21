@@ -50,7 +50,7 @@ const LoginForm = () => {
                         Login
                     </button>
                     <div className='already-user'>
-                        <h4>New here ? Sign up</h4>
+                        <h4>New here ? <a href="/register">Sign up</a></h4>
                     </div>
                 </form>
             </div>
