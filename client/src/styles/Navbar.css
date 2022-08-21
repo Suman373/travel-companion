@@ -1,11 +1,14 @@
 
 .nav-panel{
-    height:3rem;
+    position:fixed;
+    height:4rem;
     width:100vw;
     padding:1rem;
     display:flex;
     align-items: center;
     justify-content: flex-end;
+    margin-bottom: 1rem;
+    background:var(--body-bg);
 }
 
 .nav-panel .nav-logo{
@@ -13,6 +16,7 @@
     left:1rem;
     top:1rem;
     font-size: 1.8rem;
+    font-family: 'Anton',serif;
     text-decoration: none;
     color:var(--blue);
 }
@@ -20,7 +24,6 @@
 .nav-panel button{
     font-size: 1rem;
     margin:0 1rem;
-    margin-top: 1.5rem;
     outline:none;
     border:none;
     border-radius: 15px;
@@ -28,4 +31,22 @@
     background:var(--blue);
     color:white;
     cursor: pointer;
+}
+
+@media screen and (max-width:650px){
+    .nav-panel .nav-logo{
+        font-size: 1.6rem;
+    }
+    .nav-panel button{
+        padding:8px 1rem;
+    }
+}
+@media screen and (max-width:500px){
+    .nav-panel .nav-logo{
+        font-size: 1.2rem;
+    }
+    .nav-panel button{
+        padding:8px 10px;
+        font-size: 0.8rem;
+    }
 }

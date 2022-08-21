@@ -51,7 +51,7 @@ const RegisterForm =()=>{
                     Submit
                 </button>
                 <div className='already-user'>
-                    <h4>Already have an account ? Login</h4>
+                    <h4>Already have an account ? <a href="/login">Log in</a></h4>
                 </div>
          </form> 
         </div>

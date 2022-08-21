@@ -1,16 +1,17 @@
-.form-container {
+/* .form-container {
     height: 100vh;
     width: 100vw;
     overflow: hidden;
     display: grid;
     place-content: center;
+    background:var(--body-bg);
 }
 .form-container h1{
     font-size: 2.5rem;
     color:var(--blue);
     text-align: center;
     margin:1rem;
-}
+} */
 
 .login-form {
     height: 28rem;
@@ -46,8 +47,8 @@
     font-size: 1rem;
     width:fit-content;
     padding:8px;
-    background: white;
-    color:var(--blue);
+    background: goldenrod;
+    color:white;
     outline:none;
     border:none;
     border-radius: 8px;
@@ -61,4 +62,22 @@
 }
 .already-user h4{
     color:white;
+}
+.already-user a{
+    color:yellow;
+    text-decoration: none;
+}
+@media screen and (max-width:500px){
+    .form-container h1{
+        font-size: 1.8rem;
+    }
+    .login-form{
+        width:20rem;
+        height: 25rem;
+        margin:0 auto;
+    }
+    .login-form input{
+        height:2.2rem;
+        font-size: 0.9rem;
+    }
 }
