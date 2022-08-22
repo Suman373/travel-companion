@@ -32,7 +32,7 @@ const handleSubmit = async (e) => {
     
   const res = await axios.post("/tags", newTag);
   const data=res.data
-  console.log(res)
+  console.log(data)
     setTags = [...Tags, data]
     setPlace(null);
   };
