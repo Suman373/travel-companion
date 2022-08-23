@@ -5,20 +5,29 @@ const tagModel = require("../models/tags")
 router.post("/", async (req, res) => {
     const newTag = new tagModel(req.body)
  try{
-            const tag = await newTag.save();
+    const tag = await newTag.save();
      res.status(200).send(tag)
-     console.log(tag)
+        return
         }
-    catch(err){res.status(500).json(err)}
+ catch (err) {
+     res.status(500).json(err)
+    return
+ }
 })
+
+
+
 
 router.get("/", async (req, res) => {
  try{
             const tags = await tagModel.find();
      res.status(200).send(tags)
-     console.log(tags)
+     return
         }
-    catch(err){res.status(500).json(err)}
+ catch (err) {
+     res.status(500).json(err)
+
+ }
 })
 
 module.exports=router

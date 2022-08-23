@@ -1,27 +1,28 @@
 import React,{useState} from 'react'
 import "../styles/Review.css"
+import {Navigate} from "react-router-dom"
 const axios = require("axios")
-
-
 
 function Review({Username,Place,setTags,setPlace,Tags}) {
   
-    const [title, setTitle] = useState(null);
+  const [title, setTitle] = useState(null);
   const [desc, setDesc] = useState(null);
   const [star, setStar] = useState(0);
 
 
-const handleSubmit = async (e) => {
+const handleSubmit = (e) => {
     e.preventDefault();
     const newTag = {
       username: Username,
-      title,
+      place:title,
       desc,
       rating: star,
-      lat: Place.lat,
-      long: Place.long,
+      coordinates: {
+        lati: Place.lat,
+        long: Place.long,
+      }
     };
-
+console.log(newTag)
     // const options = {
     //     method: "POST",
     //     body: JSON.stringify(newTag),
@@ -29,17 +30,24 @@ const handleSubmit = async (e) => {
     //         "Content-Type": "application/json"
     //     }
     // }
-    
-  const res = await axios.post("/tags", newTag);
-  const data=res.data
-  console.log(data)
+        
+  const postData = async () => {
+    const res = await axios.post("tags/", newTag);
+    const data = res.data
+    console.log(data)
     setTags = [...Tags, data]
     setPlace(null);
+    window.location.reload();
+  }
+
+  postData();
+  
   };
 
 
   return (
     <div>
+      
                 <form onSubmit={handleSubmit}>
                   <label>Title</label>
                   <input

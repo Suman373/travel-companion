@@ -2,23 +2,21 @@ import React, {useRef, useEffect, useState} from 'react';
 import Map, {Marker,Popup} from 'react-map-gl';
 import maplibregl from 'maplibre-gl';
 import "../styles/Review.css"
-
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import details from "../assets/General"
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 import 'maplibre-gl/dist/maplibre-gl.css';
 import Form from './Form';
 import Review from './Review';
-import RegisterForm from './RegisterForm';
-import LoginForm from './LoginForm';
+
+import { useNavigate } from 'react-router-dom';
 
 function App() {
   const [Tags, setTags] = useState([])
   const [Username, setUsername] = useState(window.localStorage.getItem("user"));
   const [Place, setPlace] = useState(null);
   const [currentPlaceId, setCurrentPlaceId] = useState(null);
-  const [showRegister, setShowRegister] = useState(false);
-  const [showLogin, setShowLogin] = useState(false);
   const [viewport, setViewport] = useState({
     latitude: details.latitude,
     longitude: details.longitude,
@@ -57,9 +55,10 @@ function App() {
 const handleLogout = () => {
     setUsername(null);
   window.localStorage.removeItem("user");
+  window.localStorage.removeItem("islogin");
   };
 
-
+    const navigate = useNavigate();
 
   return (
     <Map
@@ -74,6 +73,7 @@ const handleLogout = () => {
       mapStyle={details.mapStyle}
       onClick={handleAddClick}
     >
+      <ArrowBackIcon color='black' className='backButton' onClick={()=>{navigate("/")}} />
       {Tags.map( p => (
         <>
         <Marker key={p._id + 1} mapStyle={details.mapStyle} mapLib={maplibregl} longitude={p.coordinates.long} latitude={p.coordinates.lati}  >
@@ -126,25 +126,25 @@ const handleLogout = () => {
           </button>
         ) : (
           <div className="buttons">
-            <button className="button login" onClick={() => setShowLogin(true)}>
+            <button className="button login" onClick={()=>{navigate("/login")}}>
               Log in
             </button>
             <button
               className="button register"
-              onClick={() => setShowRegister(true)}
+              onClick={()=>{navigate("/register")}}
             >
               Register
             </button>
           </div>
         )}
-        {showRegister && <RegisterForm setShowRegister={setShowRegister} />}
+        {/* {showRegister && <RegisterForm setShowRegister={setShowRegister} />}
         {showLogin && (
           <LoginForm
             setShowLogin={setShowLogin}
             setUsername={setUsername}
             myStorage={window.localStorage}
           />
-        )}
+        )} */}
 
 
     </Map>

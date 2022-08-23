@@ -29,7 +29,10 @@ router.post("/login", async(req, res) => {
       email: req.body.email
     }, 'password');
       
-      !userPass && res.status(400).send("No user Found") 
+    if (!userPass) {
+      res.status(400).send("No user Found")
+      return;
+    }
       
       const userLogin = bcrypt.compareSync(req.body.password, userPass.password);
             !userLogin && res.status(400).send("Incorrect Password or Username");
@@ -37,11 +40,13 @@ router.post("/login", async(req, res) => {
       res
       .status(200)
       .send({ _id: userPass._id, username: req.body.username })
+    return
       
   } catch (err) {
     res
       .status(500)
       .json(err)
+    return
   }
 })
 
