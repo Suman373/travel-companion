@@ -1,23 +1,64 @@
 import React from 'react';
 import { useState } from 'react';
 import '../styles/RegisterForm.css';
+import { useNavigate } from "react-router-dom";
 
-const RegisterForm =()=>{
+const axios = require("axios")
+
+
+const RegisterForm = () => {
+        const navigate = useNavigate();
+
 
     document.title = "Travel Companion | Sign Up";
 
     // states
+    const [success, setSuccess] = useState(false);
+    const [error, setError] = useState(false);
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
-    const [ pwd, setPwd] = useState('');
+    const [pwd, setPwd] = useState('');
+    const [Username, setUsername] = useState(window.localStorage.getItem("user"));
+
+
+    const handleRedirect = (e) => {
+        navigate('/login');
+    }
 
     const handleSubmit = (e)=>{
         e.preventDefault();
-        console.log(name,email,pwd);
+
+        const newUser = {
+            username: name,
+            email: email,
+            password: pwd
+        }
+
+        console.log(newUser)
+        
+        const postData = async () => {
+            try {
+                const res = await axios.post("users/register", newUser);
+                setError(false);
+                setSuccess(true);
+                setUsername(res.data.username)
+                window.localStorage.setItem('user', res.data.username);
+                { res && navigate('/login') }
+                console.log("Posting Data", )
+            }
+            catch {
+                setError(true)
+            }
+
+        }
+
+        postData();
+
     }
 
     return(
         <>
+        
         <div className="form-container">
             <h1>Register yourself as User</h1>
         <form onSubmit={handleSubmit} className="register-form">
@@ -51,8 +92,10 @@ const RegisterForm =()=>{
                     Submit
                 </button>
                 <div className='already-user'>
-                    <h4>Already have an account ? <a href="/login">Log in</a></h4>
-                </div>
+                    <h4>Already have an account ? <a href="/login">Log in</a> or <a href="/">Home</a></h4>
+                    </div>
+                    {success && <span className="success">Successfull. You can login now!</span>}
+        {error && <span className="failure">Something went wrong!</span>}
          </form> 
         </div>
         </>
