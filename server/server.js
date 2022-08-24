@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require('mongoose');
 const dotenv= require("dotenv")
-const PORT = 8113
+const PORT = process.env.PORT || 8113;
 const app = express()
 
 const tagRoute = require("./routes/tags");
