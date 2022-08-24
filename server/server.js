@@ -4,8 +4,8 @@ const dotenv= require("dotenv")
 const PORT = 8113
 const app = express()
 
-const tagRoute = require("./routes/tags")
-const userRoute= require("./routes/users")
+const tagRoute = require("./routes/tags");
+const userRoute= require("./routes/users");
 
 dotenv.config()
 
@@ -17,8 +17,6 @@ async function main() {
     mongoose.connect(process.env.MONGODB_CODE);
     console.log("DB Connected")
 }
-
-
 
 app.get("/", (req, res) => {
     res.send("Hello")

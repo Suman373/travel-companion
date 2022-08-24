@@ -26,7 +26,7 @@ const LoginForm = () => {
             password: pwd
         }
 
-        console.log(User)
+        // console.log(User)
         
         const postData = async () => {
             try {
@@ -41,9 +41,7 @@ const LoginForm = () => {
             }
 
         }
-
         postData();
-         
      }
 
     return (

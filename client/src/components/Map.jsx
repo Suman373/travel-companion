@@ -4,8 +4,6 @@ import {Room, Star, StarBorder} from "@material-ui/icons";
 
 import '../styles/Map.css';
 
-// const API_KEY = rs4WYDEGqgPJzgavSd8v;
-
 const Map = () => {
     const myStorage = window.localStorage;
   const [currentUsername, setCurrentUsername] = useState(myStorage.getItem("user"));
@@ -15,7 +13,6 @@ const Map = () => {
   const [lng,setLng] = useState(78.9629);
   const [lat,setLat] = useState(20.5937);
   const [zoom,setZoom] = useState(8);
-  const API_KEY = 'rs4WYDEGqgPJzgavSd8v';
 
     const handleAddClick = (e) => {
         
