@@ -9,7 +9,7 @@ const Banner=()=>{
     const navigate = useNavigate();
 
     const handleRedirect = (e) => {
-        navigate('/register');
+        navigate('/login');
     }
 
     return(

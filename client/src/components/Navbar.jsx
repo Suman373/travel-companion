@@ -20,7 +20,7 @@ const Navbar = ()=>{
         <>
             <nav className="nav-panel">
                 <a className="nav-logo"
-                href="#">
+                href="/">
                     Travel Companion
                 </a>
                 <button

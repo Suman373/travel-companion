@@ -3,11 +3,10 @@ import RegisterForm from './components/RegisterForm';
 import LoginForm from './components/LoginForm';
 import HomePage from './pages/HomePage';
 import UserPage from './pages/UserPage';
-import {BrowserRouter as Brouter, Routes, Route} from 'react-router-dom';
+import { Routes, Route} from 'react-router-dom';
 function App() {
   return (
     <div className="App">
-    <Brouter>
     <Routes>
      <Route exact path="/" element={
           <>
@@ -26,7 +25,6 @@ function App() {
         <UserPage/>
      }></Route>
     </Routes>
-    </Brouter>
      </div>
   );
 }
