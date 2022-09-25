@@ -2,7 +2,7 @@
 
 ![travel-companion-readme-banner](https://user-images.githubusercontent.com/95040233/187059394-1fcc8081-b4dc-4234-a79e-f2db26ddeb33.png)
 
-### Authors : [Suman Roy](https://github.com/Suman373) & [Jayanth MKV](https://github.com/Jayanth-MKV)
+#### [Suman Roy](https://github.com/Suman373) & [Jayanth MKV](https://github.com/Jayanth-MKV)
 
 ### About 
 Travel Companion is a project in development. User can register and login, to check reviews on certain markers post by other users on the given map.
